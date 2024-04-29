@@ -1,5 +1,11 @@
-import FooterComponent from "./Footers/FooterComponent";
+import NavbarComponent from "./navbars/NavbarComponent";
+
 import BestSellerCarouselComponent from "./homepage/BestSellerCarouselComponent";
 
-export { FooterComponent };
-export { BestSellerCarouselComponent };
+import FooterComponent from "./Footers/FooterComponent";
+
+export {
+    FooterComponent,
+    BestSellerCarouselComponent,
+    NavbarComponent
+};

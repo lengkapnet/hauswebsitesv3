@@ -160,7 +160,7 @@ const MenuCarouselComponent = () => {
 
   return (
     // Carousel Best Seller
-    <div className="bg-[#EFDFD1]">
+    <div className="bg-[#EFDFD1] pt-5">
       {/* Carousel Menu */}
       {/* <div className="flex  items-center w-full"> */}
       <div className="carousel-menu">
@@ -175,7 +175,7 @@ const MenuCarouselComponent = () => {
               }
             >
               <img
-                className="w-auto h-auto lg:w-[90%] lg:h-[90%] px-2 py-5 lg:py-10    "
+                className="w-auto h-auto lg:w-[90%] lg:h-[90%] px-2 py-5 lg:py-10"
                 src={item.image}
                 alt={item.name}
               />
@@ -185,7 +185,7 @@ const MenuCarouselComponent = () => {
       </div>
 
       {/* Line separator */}
-      <div className="flex justify-center w-full">
+      <div className="flex justify-center w-full mt-2">
         <hr className=" hidden w-[90%] lg:my-4 border-t-2 border-gray-400 lg:block " />
       </div>
 
@@ -195,7 +195,7 @@ const MenuCarouselComponent = () => {
           {dataPromoSmall.map((item, index) => (
             <div key={index}>
               <img
-                className="w-100 h-auto px-2   "
+                className="w-100 h-auto px-2"
                 src={item.image}
                 alt={item.name}
               />
@@ -229,11 +229,10 @@ const MenuCarouselComponent = () => {
             <div className="text-center">
               {/* Custom paging indicator */}
               <div
-                className={`h-1 w-2 lg:h-2 lg:w-2 rounded-full mx-auto transition-all duration-500 ease-in-out ${
-                  i === currentSlide
-                    ? "bg-gray-400 lg:h-2"
-                    : "bg-white w-4 h-2 lg:w-7 lg:h-2"
-                }`}
+                className={`h-1 w-2 lg:h-2 lg:w-2 rounded-full mx-auto transition-all duration-500 ease-in-out ${i === currentSlide
+                  ? "bg-gray-400 lg:h-2"
+                  : "bg-white w-4 h-2 lg:w-7 lg:h-2"
+                  }`}
               ></div>
             </div>
           )}
