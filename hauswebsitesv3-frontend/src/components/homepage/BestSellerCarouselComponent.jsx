@@ -26,7 +26,7 @@ const MenuCarouselComponent = () => {
       <img
         src={right_arrow}
         alt="Next"
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 -translate-x-1/4 w-8 h-8 md:h-12 md:w-12 lg:h-14 lg:w-14 cursor-pointer"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 -translate-x-1/4 w-10 h-10 lg:h-14 lg:w-14 cursor-pointer z-10"
         onClick={() => sliderMenuRef.current.slickNext()}
       />
     );
@@ -38,7 +38,7 @@ const MenuCarouselComponent = () => {
       <img
         src={left_arrow}
         alt="Previous"
-        className=" absolute left-0 top-1/2 transform -translate-y-1/2 translate-x-1/4 w-8 h-8 md:h-12 md:w-12 lg:h-14 lg:w-14 cursor-pointer z-10"
+        className=" absolute left-0 top-1/2 transform -translate-y-1/2 translate-x-1/4 w-10 h-10 lg:h-14 lg:w-14 cursor-pointer z-10"
         onClick={() => sliderMenuRef.current.slickPrev()}
       />
     );
@@ -124,13 +124,13 @@ const MenuCarouselComponent = () => {
   var settingPromoBigCarousel = {
     infinite: true,
     dots: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    speed: 500,
+    autoplaySpeed: 4000,
     fade: true,
-    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+    beforeChange: (newIndex) => setCurrentSlide(newIndex),
     responsive: [
       {
         breakpoint: 1024,
@@ -143,6 +143,7 @@ const MenuCarouselComponent = () => {
         breakpoint: 786,
         settings: {
           centerMode: false,
+          infinite: true,
           slidesToScroll: 1,
         },
       },
@@ -150,6 +151,7 @@ const MenuCarouselComponent = () => {
         breakpoint: 480,
         settings: {
           centerMode: false,
+          infinite: true,
           slidesToScroll: 1,
         },
       },
@@ -184,7 +186,7 @@ const MenuCarouselComponent = () => {
 
       {/* Line separator */}
       <div className="flex justify-center w-full">
-        <hr className=" hidden w-[90%] lg:my-4 border-t-2 border-gray-400 md:block " />
+        <hr className=" hidden w-[90%] lg:my-4 border-t-2 border-gray-400 lg:block " />
       </div>
 
       {/* Carousel Promo 1*/}
@@ -218,7 +220,7 @@ const MenuCarouselComponent = () => {
       </div>
 
       {/* Carousel Promo 2*/}
-      <div className="carousel-promo-big py-6 lg:py-10  relative">
+      <div className="carousel-promo-big py-6 lg:py-10 relative">
         <Slider
           className=""
           ref={sliderPromoBigRef} // Ensure sliderPromoBigRef is defined using useRef()
@@ -227,13 +229,15 @@ const MenuCarouselComponent = () => {
             <div className="text-center">
               {/* Custom paging indicator */}
               <div
-                className={`h-2 w-2 md:w-4 rounded-full mx-auto transition-all duration-500 ease-in-out ${
-                  i === currentSlide ? "bg-gray-400 w-8" : "bg-white opacity-75"
+                className={`h-1 w-2 lg:h-2 lg:w-2 rounded-full mx-auto transition-all duration-500 ease-in-out ${
+                  i === currentSlide
+                    ? "bg-gray-400 lg:h-2"
+                    : "bg-white w-4 h-2 lg:w-7 lg:h-2"
                 }`}
               ></div>
             </div>
           )}
-          dotsClass="slick-dots absolute bottom-2 w-full flex justify-center "
+          dotsClass="slick-dots absolute bottom-0 lg:bottom-2 flex justify-center"
         >
           {dataPromoBig.map((item, index) => (
             <div key={index}>
