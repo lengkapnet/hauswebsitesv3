@@ -36,7 +36,6 @@ const HausRameComponent = () => {
           </div>
         </div>
       </div>
-      <div className="h-96 bg-black"></div>
     </>
   );
 };
