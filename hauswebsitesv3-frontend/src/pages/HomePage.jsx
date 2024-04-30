@@ -22,19 +22,19 @@ const HomePage = () => {
           <img
             src={hausxoatside}
             alt="Haus X Outside"
-            className="relative m-auto w-3/4 md:top-20 md:z-10 md:m-0 md:w-1/2"
+            className="relative m-auto w-3/4 md:top-20 md:z-10 md:m-0 md:w-1/2 lg:w-1/3 lg:left-20"
           />
         </div>
         <div className="relative flex flex-col items-center justify-center px-10 md:-top-10 md:z-10 md:flex-row lg:-top-24">
           <img
             src={nikmoat}
             alt="NikmOAT Banget"
-            className="relative mt-10 w-5/6 md:left-32 md:z-20 md:w-1/2 lg:bottom-12 lg:left-52 lg:w-2/5"
+            className="relative mt-10 w-5/6 md:left-32 md:z-20 md:w-1/2 lg:bottom-12 lg:left-56 lg:w-2/5"
           />
           <img
             src={oatside}
             alt="Oatside"
-            className="relative mr-10 md:z-10 md:w-1/2 lg:right-10 lg:w-full"
+            className="relative mr-10 md:z-10 md:w-1/2 lg:right-10 lg:w-full lg:top-10"
           />
         </div>
         <div className="relative flex w-full items-end justify-between px-5 md:absolute md:bottom-1 lg:bottom-10">
