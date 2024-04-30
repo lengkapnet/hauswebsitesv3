@@ -46,7 +46,6 @@ const MenuCarouselComponent = () => {
 
   //carousel menu setting
   var settingsCarouselMenu = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -63,7 +62,6 @@ const MenuCarouselComponent = () => {
           slidesToScroll: 1,
           centerMode: true,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -89,8 +87,10 @@ const MenuCarouselComponent = () => {
   var settingPromoCarousel = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
     centerMode: true,
+    slidesToShow: 3,
+    nextArrow: <SampleNextArrowNull />,
+    prevArrow: <SamplePrevArrowNull />,
     slidesToScroll: 1,
     responsive: [
       {
@@ -98,14 +98,15 @@ const MenuCarouselComponent = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          centerMode: true,
           infinite: true,
         },
       },
       {
         breakpoint: 786,
         settings: {
-          centerMode: false,
           slidesToShow: 2,
+          centerMode: false,
           slidesToScroll: 1,
         },
       },
@@ -120,6 +121,16 @@ const MenuCarouselComponent = () => {
     ],
   };
 
+  // rigt arrow
+  function SampleNextArrowNull() {
+    return <img />;
+  }
+
+  //left arrow
+  function SamplePrevArrowNull() {
+    return <img />;
+  }
+
   //carousel promo big setting
   var settingPromoBigCarousel = {
     infinite: true,
@@ -127,6 +138,8 @@ const MenuCarouselComponent = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    nextArrow: <SampleNextArrowNull />,
+    prevArrow: <SamplePrevArrowNull />,
     speed: 500,
     autoplaySpeed: 4000,
     fade: true,
@@ -161,8 +174,7 @@ const MenuCarouselComponent = () => {
   return (
     // Carousel Best Seller
     <div className="bg-[#EFDFD1] pt-5">
-      {/* Carousel Menu */}
-      {/* <div className="flex  items-center w-full"> */}
+      {/* Carousel Menu -> Aman */}
       <div className="carousel-menu">
         <Slider ref={sliderMenuRef} {...settingsCarouselMenu}>
           {dataBestSeller.map((item, index) => (
@@ -192,13 +204,10 @@ const MenuCarouselComponent = () => {
       {/* Carousel Promo 1*/}
       <div className="carousel-promo-small lg:pt-10">
         <Slider ref={sliderPromoSmallRef} {...settingPromoCarousel}>
+          {/* <Slider ref={sliderPromoSmallRef} {...settingsCarouselMenu}> */}
           {dataPromoSmall.map((item, index) => (
             <div key={index}>
-              <img
-                className="w-100 h-auto px-2"
-                src={item.image}
-                alt={item.name}
-              />
+              <img className="w-auto  px-3" src={item.image} alt={item.name} />
             </div>
           ))}
         </Slider>
@@ -223,16 +232,16 @@ const MenuCarouselComponent = () => {
       <div className="carousel-promo-big py-6 lg:py-10 relative">
         <Slider
           className=""
-          ref={sliderPromoBigRef} // Ensure sliderPromoBigRef is defined using useRef()
+          ref={sliderPromoBigRef}
           {...settingPromoBigCarousel}
           customPaging={(i) => (
             <div className="text-center">
-              {/* Custom paging indicator */}
               <div
-                className={`h-1 w-2 lg:h-2 lg:w-2 rounded-full mx-auto transition-all duration-500 ease-in-out ${i === currentSlide
-                  ? "bg-gray-400 lg:h-2"
-                  : "bg-white w-4 h-2 lg:w-7 lg:h-2"
-                  }`}
+                className={`h-1 w-2 lg:h-2 lg:w-2 rounded-full mx-auto transition-all duration-500 ease-in-out ${
+                  i === currentSlide
+                    ? "bg-gray-400 lg:h-2"
+                    : "bg-white w-4 h-2 lg:w-7 lg:h-2"
+                }`}
               ></div>
             </div>
           )}
