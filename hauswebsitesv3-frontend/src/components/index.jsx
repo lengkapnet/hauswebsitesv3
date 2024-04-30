@@ -1,3 +1,5 @@
+import NavbarComponent from "./navbars/NavbarComponent";
+
 import FooterComponent from "./Footers/FooterComponent";
 import BestSellerCarouselComponent from "./homepage/BestSellerCarouselComponent";
 import HausRameComponent from "./homepage/HausRameComponent";
@@ -8,4 +10,5 @@ export {
   BestSellerCarouselComponent,
   HausRameComponent,
   HausMobileAppComponent,
+  NavbarComponent,
 };
