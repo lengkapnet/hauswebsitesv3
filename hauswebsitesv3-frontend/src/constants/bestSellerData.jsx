@@ -8,7 +8,7 @@ import mango_cheese_silky_pudding from "../assets/images/best_seller/mango_chees
 import thai_tea_with_boba_brown_sugar from "../assets/images/best_seller/thai_tea_with_boba_brown_sugar.png";
 import beli_satu_gratis_satu from "../assets/images/best_seller/beli_satu_gratis_satu.png";
 import promo_bundling from "../assets/images/best_seller/promo_bundling.png";
-import promo_20_percent from "../assets/images/best_seller/promo_20_percent.png";
+import promo_twenty_percent from "../assets/images/best_seller/promo_twenty_percent.png";
 import buy_one_get_one from "../assets/images/best_seller/buy_one_get_one.png";
 import spicy_double from "../assets/images/best_seller/spicy_double.png";
 export const dataBestSeller = [
@@ -53,7 +53,7 @@ export const dataPromoSmall = [
   },
   {
     name: "Promo 20 Persen",
-    image: promo_20_percent,
+    image: promo_twenty_percent,
   },
   {
     name: "Promo Bundling",
