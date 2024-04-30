@@ -15,12 +15,17 @@ const donwloadAPKIos = () => {
 const HausMobileAppComponent = () => {
   return (
     <>
-      <div className="relative w-full justify-center bg-[#EFDFD1] py-10  text-[#612072] lg:h-[100vhvh] xl:h-[105vh]">
-        <div className="my-auto ">
-          <div className="ml-8 hidden w-[32.5%] md:absolute md:my-14 md:block  xl:my-0 xl:-mt-12">
-            <img src={mobileMockup}></img>
+      <div className="md:[105vh] relative h-[812px] w-full justify-center bg-[#EFDFD1] py-14 text-[#612072] md:h-full">
+        <div className="relative my-auto h-full">
+          <div className="absolute ml-6 mt-2 hidden h-full md:block lg:ml-8 xl:-mt-10 xl:ml-12">
+            <div className="flex h-full items-center ">
+              <img
+                src={mobileMockup}
+                className="my-auto w-[280px] lg:w-[360px] xl:w-[400px]"
+              ></img>
+            </div>
           </div>
-          <div className="my-auto flex  h-screen w-full justify-center rounded-[42px] bg-[#F3B964] px-4 py-6 md:justify-end md:px-0 md:py-6 lg:h-[40vh] lg:py-2 xl:h-[80vh]">
+          <div className="my-auto flex h-full w-full justify-center rounded-[42px] bg-[#F3B964] px-4 py-6 md:h-[50vh] md:justify-end md:px-0 md:py-6 lg:py-2 xl:h-[80vh]">
             <div className="ml-4 md:my-auto md:w-3/5">
               <h1 className="mt-2 text-center text-3xl font-extrabold md:text-start md:text-5xl">
                 Haus Mobile App For Order
@@ -53,8 +58,8 @@ const HausMobileAppComponent = () => {
                   className="h-[40px] cursor-pointer md:h-full"
                 />
               </div>
-              <div className="absolute mt-5 w-[90.5%]  md:hidden">
-                <img src={mobileMockup}></img>
+              <div className="absolute mt-5 flex w-[90%] md:hidden">
+                <img src={mobileMockup} width={200} className="mx-auto"></img>
               </div>
             </div>
           </div>
