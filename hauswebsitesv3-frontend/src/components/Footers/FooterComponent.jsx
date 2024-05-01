@@ -2,10 +2,10 @@ import "./footer.css";
 import logo from "../../assets/images/logoatas.png";
 import playstore from "../../assets/images/googleplay.png";
 import appstore from "../../assets/images/appstore.png";
-import vektor from "../../assets/images/Vector.png";
-import instagram from "../../assets/images/Instagram.png";
-import tiktok from "../../assets/images/TikTok.png";
-import linkedin from "../../assets/images/LinkedIn.png";
+import vektor from "../../assets/images/vector.png";
+import instagram from "../../assets/images/instagram.png";
+import tiktok from "../../assets/images/tiktok.png";
+import linkedin from "../../assets/images/linkedin.png";
 
 const donwloadAPK = () => {
   window.open(
