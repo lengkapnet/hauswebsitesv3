@@ -1,4 +1,4 @@
-import hausRame from "../../assets/images/hausRame.png";
+import hausRame from "../../assets/images/haus_rame.png";
 
 const HausRameComponent = () => {
   return (
