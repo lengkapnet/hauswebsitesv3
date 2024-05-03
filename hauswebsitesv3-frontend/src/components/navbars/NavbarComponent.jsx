@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import logo from "../../assets/images/logo/logoatas.png";
 import { NavLink } from "react-router-dom";
 
@@ -9,11 +9,11 @@ const donwloadAPK = () => {
 };
 
 const NavbarComponent = () => {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    // const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!isDropdownOpen);
-    };
+    // const toggleDropdown = () => {
+    //     setDropdownOpen(!isDropdownOpen);
+    // };
 
     return (
         <>
@@ -24,7 +24,7 @@ const NavbarComponent = () => {
                     </NavLink>
                 </div>
                 <div className="hidden md:flex xl:ml-auto lg:ml-auto md:ml-0 text items-center">
-                    <NavLink
+                    {/* <NavLink
                         className="px-1.5 lg:px-3"
                         to="/about"
                     >
@@ -57,7 +57,7 @@ const NavbarComponent = () => {
                         to="/karir"
                     >
                         KARIR
-                    </NavLink>
+                    </NavLink> */}
                     <button
                         onClick={donwloadAPK}
                         className="py-2 px-6 bg-[#8A489C] hidden md:flex hover:bg-[#6e3e7e] rounded-md text-white text-sm xl:ml-12 lg:ml-8 "
@@ -65,7 +65,7 @@ const NavbarComponent = () => {
                         <strong>Download Apps</strong>
                     </button>
                 </div>
-                <div>
+                {/* <div>
                     <button
                         className={` text-3xl p-2 text-purple-main md:hidden ${isDropdownOpen ? "active" : ""
                             }`}
@@ -75,9 +75,9 @@ const NavbarComponent = () => {
                             <strong>☰</strong>
                         </a>
                     </button>
-                </div>
+                </div> */}
             </nav>
-            {isDropdownOpen && (
+            {/* {isDropdownOpen && (
                 <div className="fixed py-3 z-50 flex flex-col w-full items-end space-y-2 bg-white bg-opacity-90 font-semibold text-purple-main">
                     <NavLink className="px-7 lg:px-3" to="/about">
                         TENTANG KAMI
@@ -104,7 +104,7 @@ const NavbarComponent = () => {
                         <strong>Download Apps</strong>
                     </button>
                 </div>
-            )}
+            )} */}
         </>
     );
 };
